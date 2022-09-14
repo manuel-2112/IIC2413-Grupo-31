@@ -7,3 +7,5 @@
 .ssh/
 .bash_history
 .psql_history
+
+token.txt
