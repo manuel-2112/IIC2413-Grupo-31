@@ -15,19 +15,33 @@
     ?>
 
     <div class="container">
-    <h1>Entrega <?php echo "$n_entrega" ?></h1>
-    <h2><small class="text-muted">Grupo <?php echo "$n_grupo" ?></small></h2>
+    <h1>Bienvenido/a:</h1>
+    <h2><small class="text-muted">Grupo <?php echo "$n_grupo Entrega $n_entrega"?></small></h2>
     </div>
     <br><br>
-
+    <form>
     <div class="container">
     <h2> Consulta: </h2>
+    <select class="form-select" id="selectConsult" aria-label="Default select example">
+        <option selected>Seleccione una consulta</option>
+        <option value="1">Contacto de artistas</option>
+        <option value="2">Entradas de cortesía de artistas</option>
+        <option value="3">Información del Tour más reciente</option>
+        <option value="4">Países de un Tour</option>
+        <option value="5">Productoras de un artista</option>
+        <option value="6">Hospedaje de artistas</option>
+        <option value="7">Artista con mayor entrega de entradas de cortesía</option>
+    </select>
+    </form>
+
+    <br>
+
     </div>
     <div class="container">
     <form action="index.php" method="post" id="myForm">
 
 
-        <div class="row mb-3">
+        <div id="divArtista" class="row mb-3">
             <label for="artistaInput" class="col-sm-2 col-form-label col-form-label-lg">Artista</label>
             <div class="col-sm-10">
                 <input type="text" class="form-control" name="artista" id="artistaInput" placeholder="Bad Bunny" require></input>
@@ -35,7 +49,7 @@
         </div>
         
 
-        <div class="row mb-3">
+        <div id="divTour" class="row mb-3">
             <label for="tourInput" class="col-sm-2 col-form-label col-form-label-lg">Tour</label>
             <div class="col-sm-10">
             <input type="text" class="form-control" name="tour" id="tourInput" placeholder="World's Hottest Tour" require></input>
@@ -54,15 +68,6 @@
     </div>
 
     <br><br><br>
-
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-        <symbol id="check-circle-fill" viewBox="0 0 16 16">
-            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-        </symbol>
-        <symbol id="info-fill" viewBox="0 0 16 16">
-            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
-        </symbol>
-    </svg>
 
     <div class="container">
     <?php
@@ -84,7 +89,7 @@
             } else {
                 echo '<div class="alert alert-secondary alert-dismissible fade show" role="alert">
                     <h4 class="alert-heading">No hay datos que mostrar...</h4>
-                    <p>No hay ingresados en la busqueda.</p>
+                    <p>No hay nada ingresado en la busqueda.</p>
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     <hr>
                     <div class="spinner-border text-secondary" role="status">
@@ -116,6 +121,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script src="https://cdn.rawgit.com/PascaleBeier/bootstrap-validate/v2.2.5/dist/bootstrap-validate.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script src="js/main.js"></script>'
     <script>
         //https://bootstrap-validate.js.org/v2/rules.html
         bootstrapValidate('#artistaInput', 'required:Este campo es requerido.|max:20:No es posible ingresar más de 20 caracteres.')
