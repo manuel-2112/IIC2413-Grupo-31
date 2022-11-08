@@ -4,10 +4,11 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style type="text/css" media="screen">
-            #form_1,#form_2,#form_3,#form_4,#form_5,#form_6,#form_7 {display:none;}
+        <style media="screen">
+            #form_1,#form_2,#form_3,#form_4,#form_5,#form_6,#form_7,#noDatos {display:none;}
         </style>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/background_style.css" media="screen" />
         <title>E2 Grupo 31</title>
     </head>
     <body>
@@ -16,7 +17,7 @@
     $n_grupo = 31; //Este es el nmo de entrega
     include "templates/header.php"
     ?>
-
+    
     <div class="container">
     <h1>Bienvenido/a:</h1>
     <h2><small class="text-muted">Grupo <?php echo "$n_grupo Entrega $n_entrega"?></small></h2>
@@ -26,7 +27,7 @@
     <div class="container">
     <h2> Consulta: </h2>
     <select class="form-select" id="selectConsult" aria-label="Default select example">
-        <option selected>Seleccione una consulta</option>
+        <option id="0" selected>Seleccione una consulta</option>
         <option id="1">Contacto de artistas</option>
         <option id="2">Entradas de cortesía de artistas</option>
         <option id="3">Información del Tour más reciente</option>
@@ -44,7 +45,7 @@
     
     <form action="index.php" method="post" id="form_1" class="myForm">
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button id="clickMe" type="submit" class="btn btn-outline-primary">Consultar</button>
+        <button name="button_1" type="submit" class="btn btn-outline-primary">Consultar</button>
     </div>
     </form>
 
@@ -56,7 +57,7 @@
             </div>
         </div>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button id="clickMe" type="submit" class="btn btn-outline-primary">Consultar</button>
+            <button name="button_2" type="submit" class="btn btn-outline-primary">Consultar</button>
         </div>
     </form>
 
@@ -68,7 +69,7 @@
             </div>
         </div>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button id="clickMe" type="submit" class="btn btn-outline-primary">Consultar</button>
+            <button name="button_3" type="submit" class="btn btn-outline-primary">Consultar</button>
         </div>
     </form>
 
@@ -80,7 +81,7 @@
             </div>
         </div>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button id="clickMe" type="submit" class="btn btn-outline-primary">Consultar</button>
+            <button name="button_4" type="submit" class="btn btn-outline-primary">Consultar</button>
         </div>
     </form>
 
@@ -92,7 +93,7 @@
             </div>
         </div>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button id="clickMe" type="submit" class="btn btn-outline-primary">Consultar</button>
+            <button name="button_5" type="submit" class="btn btn-outline-primary">Consultar</button>
         </div>
     </form>
 
@@ -104,64 +105,77 @@
             </div>
         </div>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button id="clickMe" type="submit" class="btn btn-outline-primary">Consultar</button>
+            <button name="button_6" type="submit" class="btn btn-outline-primary">Consultar</button>
         </div>
     </form>
 
 
     <form action="index.php" method="post" id="form_7" class="myForm">
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button id="clickMe" type="submit" class="btn btn-outline-primary">Consultar</button>
+        <button name="button_7" type="submit" class="btn btn-outline-primary">Consultar</button>
     </div>
     </form>
     </div>
 
     <br><br><br>
 
-<div class="container" id="resultado">
+    <div class="container" id="resultado">
     <?php
-        $artista = $_POST["artista"] ?? null;
-        $tour = $_POST["tour"] ?? null;
-        
-        if ($artista or $tour){
-            echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-                        <h4 class="alert-heading">¡Consulta correcta!</h4>
-                        <p>La consulta de los datos ingresados fue realizada con éxito. El resultado es el siguiente:</p>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        <hr>
-                        <p class="mb-0">Artista: '.$artista.'</p>
-                        <p class="mb-0">Tour: '.$tour.'</p>
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                            <button class="btn btn-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Mostrar detalles</button>
-                        </div>
-                </div>';
-            } else {
-                echo '<div class="alert alert-secondary alert-dismissible fade show" role="alert">
-                    <h4 class="alert-heading">No hay datos que mostrar...</h4>
-                    <p>No hay nada ingresado en la busqueda.</p>
+    $botones = array(
+        'Contacto de artistas' => isset($_POST['button_1']),
+        'Entradas de cortesía de artistas' => isset($_POST['button_2']),
+        'Información del Tour más reciente' => isset($_POST['button_3']),
+        'Información del Tour más reciente' => isset($_POST['button_4']),
+        'Productoras de un artista' => isset($_POST['button_5']),
+        'Hospedaje de artistas' => isset($_POST['button_6']),
+        'Artista con mayor entrega de entradas de cortesía' => isset($_POST['button_7']));
+
+    foreach ($botones as $opcion => $boton) {
+    if ($boton) {
+        echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <h4 class="alert-heading">¡Consulta correcta!</h4>
+                    <p>La consulta de los datos ingresados fue realizada con éxito.</p>
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     <hr>
-                    <div class="spinner-border text-secondary" role="status">
-                        <span class="visually-hidden">Loading...</span>
+                    <p>Se eligió la opción: '.$opcion.'</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#myModal" aria-controls="offcanvasBottom">Mostrar resultado</button>
                     </div>
-                </div>';
-            }
+            </div>';
+            break;
+        }        
+    }
     ?>
+    </div>
+
+<div class="container" id="noDatos">
+    <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+        <h4 class="alert-heading">Esperando una consulta...</h4>
+        <p>No hay nada ingresado en la busqueda.</p>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <hr>
+        <div class="d-flex align-items-center">
+            <strong>Cargando...</strong>
+            <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+        </div>
+    </div>
 </div>
 
-    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
-    <div class="offcanvas-header container">
-        <h3 class="offcanvas-title" id="offcanvasBottomLabel">Detalles:</h3>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    
-    <div class="offcanvas-body small container">
-    <?php
-    echo '
-        <h5><small class="text-muted">Artista: '.$artista.'<small></h5>
-        <h5><small class="text-muted">Tour: '.$tour.'<small></h5>';
-    ?>
-    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Resultados</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <?php include('consultas/ejemplo.php')?>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <?php
