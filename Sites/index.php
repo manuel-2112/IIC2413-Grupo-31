@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style media="screen">
-            #form_1,#form_2,#form_3,#form_4,#form_5,#form_6,#form_7,#noDatos {display:none;}
+            #form_1,#form_2,#form_3,#form_4,#form_5,#form_6,#form_7 {display:none;}
         </style>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
         <link rel="stylesheet" href="assets/background_style.css" media="screen" />
@@ -150,7 +150,7 @@
 
 <div class="container" id="noDatos">
     <div class="alert alert-secondary alert-dismissible fade show" role="alert">
-        <h4 class="alert-heading">Esperando una consulta...</h4>
+        <h4 class="alert-heading">Esperando una nueva consulta...</h4>
         <p>No hay nada ingresado en la busqueda.</p>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         <hr>
