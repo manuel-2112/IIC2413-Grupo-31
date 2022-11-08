@@ -7,5 +7,9 @@
 .ssh/
 .bash_history
 .psql_history
+.ipynb_checkpoints
+Entrega 2/datos
+Entrega 2/datosprocesados
+procesamiento_datos.ipynb
 
 token.txt
