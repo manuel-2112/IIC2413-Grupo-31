@@ -8,6 +8,7 @@
     $boton_7 = isset($_POST['button_7']);
     $artista = $_POST["artista"] ?? null;
     $tour = $_POST["tour"] ?? null;
+    //require("../config/conexion.php");
 ?>
 <table class="table table-striped">    
   <?php
