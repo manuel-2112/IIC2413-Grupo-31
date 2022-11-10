@@ -1,4 +1,4 @@
-﻿lid,Recinto
+﻿cid,recinto
 1,Pabellon Max Schmeling
 2,Arena Ludwingsburg
 3,Irving Plaza
@@ -9,104 +9,104 @@
 8,Bilbao Arena
 9,Forest National
 10,Don Haskins Center
-11,Madison Square Garden
-12,Leons Centre
-13,Mercedes-Benz Arena
-14,Quinta Vergara
-15,Pabellon Fuente de San Luis
-16,Teatro Municipal de Santiago
-17,Palais 12
-18,Estadio Unico Diego Armando Maradona
-19,Carrer Baix Vinalopo
-20,Radio City Music Hall
-21,Spark Arena
-22,Club Blondie
-23,Club Subterraneo
-24,Olympiahalle
-25,Estadio Nacional
-26,Explanada Ciudad Empresarial
-27,SALA SANTANA
-28,El Huevo
-29,Sala La Rivera
-30,HISTORY
-31,Teatro CaupolicÃ¡n
-32,UBS Arena
-33,Teatro Cariola
-34,Estadio ANZ
-35,Estadio Bicentario de La Florida
-36,Kursaal Oostende
-37,LAUT
-38,Teatro Coliseo
-39,Vivo Rio
-40,Teatro Colon
-41,SOF Q8 Toinha Brasil
-42,The Anthem
-43,Youtube Theatre
-44,Festhalle
-45,Powerstation 33
-46,Club Providencia
-47,Estadio Monumental
-48,Studio The Venue
-49,Estadio Rose Bowl
-50,Arena TSB Bank
-51,Days Bay Pavilion
-52,Columbianhalle
-53,Shubert Theatre
-54,Sala Apolo
-55,Salitre Magico
-56,Teatro TeletÃ³n
-57,Cirque Royal
-58,The Fillmore Philadelphia
-59,Warehouse Live
-60,Jeunesse Arena
-61,Espacio Unimed
-62,Air Canada Centre
-63,Opera de Sidney
-64,Metropol
-65,Barclaycard Arena
-66,Parque Bicentenario Cerrillos
-67,La Marina de Valencia
-68,Velodromo de Berlin
-69,Palau Sant Jordi
-70,FirstOntario Centre
-71,Club RBX
-72,Carioca Club
-73,Dodger Stadium
-74,Aotea Centre
-75,Bikini Barcelona
-76,Movistar Arena
-77,Trafalgar Centre Paru
-78,ZAG Arena
-79,"Stage Live, Kalea"
-80,Gran Arena Monticello
-81,Freiheitshalle
-82,Independance Club
-83,The Brooklyn Monarch
-84,Luna Park
-85,Niceto Club
-86,Metropolitano Rosario
-87,Teatro Mayor
-88,Cupula Multiespacio
-89,Antel Arena
-90,Teatro Gran Rex
-91,Moon Valencia
-92,Chango Club
-93,La Madeleine
-94,Espacio Riesco
-95,Lanxess Arena
-96,Crypto.com Arena
-97,Phoenix Concert Theatre
-98,Aussie Stadium
-99,Casino de ViÃ±a del Mar
-100,Teatro Municipal de Valparaiso
-101,City Hall el Rodeo
-102,Palacio de las Artes
-103,Hipodromo de Palermo
-104,Sala But
-105,WIZink Center
-106,Wilterm Theatre
-107,Estadio de Futbol Atanasio Girardot
-108,Club Chocolate
-109,Estadio Santa Laura
-110,Fundo Colmito
-111,Canadian Tire Centre
+3,Madison Square Garden
+4,Leons Centre
+1,Mercedes-Benz Arena
+11,Quinta Vergara
+12,Pabellon Fuente de San Luis
+13,Teatro Municipal de Santiago
+14,Palais 12
+15,Estadio Unico Diego Armando Maradona
+16,Carrer Baix Vinalopo
+3,Radio City Music Hall
+17,Spark Arena
+13,Club Blondie
+13,Club Subterraneo
+18,Olympiahalle
+13,Estadio Nacional
+13,Explanada Ciudad Empresarial
+8,SALA SANTANA
+19,El Huevo
+20,Sala La Rivera
+21,HISTORY
+13,Teatro CaupolicÃ¡n
+3,UBS Arena
+13,Teatro Cariola
+5,Estadio ANZ
+13,Estadio Bicentario de La Florida
+22,Kursaal Oostende
+23,LAUT
+13,Teatro Coliseo
+24,Vivo Rio
+15,Teatro Colon
+25,SOF Q8 Toinha Brasil
+26,The Anthem
+27,Youtube Theatre
+28,Festhalle
+17,Powerstation 33
+13,Club Providencia
+15,Estadio Monumental
+17,Studio The Venue
+27,Estadio Rose Bowl
+29,Arena TSB Bank
+30,Days Bay Pavilion
+1,Columbianhalle
+31,Shubert Theatre
+23,Sala Apolo
+32,Salitre Magico
+13,Teatro TeletÃ³n
+14,Cirque Royal
+33,The Fillmore Philadelphia
+10,Warehouse Live
+24,Jeunesse Arena
+34,Espacio Unimed
+21,Air Canada Centre
+5,Opera de Sidney
+1,Metropol
+35,Barclaycard Arena
+13,Parque Bicentenario Cerrillos
+12,La Marina de Valencia
+1,Velodromo de Berlin
+23,Palau Sant Jordi
+36,FirstOntario Centre
+13,Club RBX
+34,Carioca Club
+27,Dodger Stadium
+17,Aotea Centre
+23,Bikini Barcelona
+15,Movistar Arena
+37,Trafalgar Centre Paru
+38,ZAG Arena
+8,"Stage Live, Kalea"
+13,Gran Arena Monticello
+18,Freiheitshalle
+20,Independance Club
+3,The Brooklyn Monarch
+15,Luna Park
+15,Niceto Club
+15,Metropolitano Rosario
+32,Teatro Mayor
+13,Cupula Multiespacio
+15,Antel Arena
+15,Teatro Gran Rex
+12,Moon Valencia
+20,Chango Club
+14,La Madeleine
+13,Espacio Riesco
+7,Lanxess Arena
+27,Crypto.com Arena
+21,Phoenix Concert Theatre
+5,Aussie Stadium
+11,Casino de ViÃ±a del Mar
+19,Teatro Municipal de Valparaiso
+39,City Hall el Rodeo
+12,Palacio de las Artes
+15,Hipodromo de Palermo
+20,Sala But
+20,WIZink Center
+27,Wilterm Theatre
+39,Estadio de Futbol Atanasio Girardot
+13,Club Chocolate
+13,Estadio Santa Laura
+11,Fundo Colmito
+40,Canadian Tire Centre
