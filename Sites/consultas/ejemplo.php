@@ -9,17 +9,7 @@
     $artista = $_POST["artista"] ?? null;
     $tour = $_POST["tour"] ?? null;
 ?>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Columna 1</th>
-      <th scope="col">Columna 2</th>
-      <th scope="col">Columna 3</th>
-    </tr>
-  </thead>
-  <tbody>
-    
+<table class="table table-striped">    
   <?php
     include "consulta1.php";
     include "consulta2.php";
@@ -29,5 +19,4 @@
     include "consulta6.php";
     include "consulta7.php";
     ?>
-  </tbody>
 </table>
