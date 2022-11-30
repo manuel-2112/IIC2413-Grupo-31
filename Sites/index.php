@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php
     include("templates/header.php");
 ?>
@@ -41,6 +42,11 @@
         </div>
     </div>
 </section>
-<?php } ?>
+<?php } elseif ($_SESSION['tipo'] == 'Productora') {
+    include('views/productora.php');
+ } elseif ($_SESSION['tipo'] == 'Artista') {
+    include('views/artista.php');
+ } ?>
+
 
 <?php include('templates/footer.php') ?>
