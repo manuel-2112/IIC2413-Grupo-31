@@ -33,13 +33,13 @@ BEGIN
     END LOOP;
   END IF;
 
-    IF artista IS NULL THEN
-    FOR datos_artista IN (SELECT * FROM artistas)
-    LOOP
-      SELECT concat(left(datos_artista.nombre_escenico, floor(random()*10)::int), left(datos_artista.contacto, floor(random()*10)::int)) INTO contraseña_generada;
-      INSERT INTO Usuarios (username, tipo, contraseña) VALUES (datos_artista.nombre_escenico, 'Artista', contraseña_generada);
-    END LOOP;
-  END IF;
+    --IF artista IS NULL THEN
+    --FOR datos_artista IN (SELECT * FROM artistas)
+    --LOOP
+    --  SELECT concat(left(datos_artista.nombre_escenico, floor(random()*10)::int), left(datos_artista.contacto, floor(random()*10)::int)) INTO contraseña_generada;
+    --  INSERT INTO Usuarios (username, tipo, contraseña) VALUES (datos_artista.nombre_escenico, 'Artista', contraseña_generada);
+    --END LOOP;
+    --END IF;
 
 END 
 $$ language plpgsql
