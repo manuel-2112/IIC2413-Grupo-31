@@ -1,16 +1,16 @@
 <?php
-    function returnTipo($username, $passwordd) {
+    function returnTipoUsuario($username, $user_password) {
         require("../config/connection.php");
 
-        $query = "SELECT tipo, CAST(contraseña as text) FROM usuarios WHERE username = '$username' LIMIT 1;";
+        $query = "SELECT tipo, CAST(contrasena as text) FROM usuarios WHERE username = '$username' LIMIT 1;";
         $result = $db2 -> prepare($query);
         $result -> execute();
         $data = $result -> fetchAll();
-        $tipo_usuario = $data[0]['tipo'];
-        $contrasena = $data[0]['contraseña'];        
+        $output_tipo = $data[0]['tipo'];
+        $output_password = $data[0]['contrasena'];        
 
-        if ($contrasena == $passwordd) {
-            return $tipo_usuario;
+        if ($output_password == $user_password) {
+            return $output_tipo;
         } else {
             return [];
         }

@@ -1,1 +1,1 @@
-<h1>Bienvenido/a: <?php echo $_SESSION['username'] ?></h1>
+<h1>Bienvenido/a: <?php echo $_SESSION['username'] ?> Productora</h1>

@@ -29,7 +29,7 @@
                 </div>
 
                 <div class="pt-1 mb-4">
-                    <button type="submit" class="btn btn-outline-info">Ingresar</button>
+                    <button type="submit" name="login" class="btn btn-outline-info">Ingresar</button>
                 </div>
 
                 <!-- <p>¿No tienes cuenta? <a href="#!" class="link-info">Registrarse</a></p> -->
