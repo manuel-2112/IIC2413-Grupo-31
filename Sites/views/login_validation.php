@@ -20,8 +20,8 @@
         } 
         else {
         $msg = 'Contraseña Incorrecta';
-        header("Location: ../views/login.php?msg=$msg");
         $alerta = true;
+        header("Location: ../views/login.php?msg=$msg");
         }   
     }
 ?>
