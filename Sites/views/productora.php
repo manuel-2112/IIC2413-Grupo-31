@@ -40,7 +40,7 @@
   ?>
 	</table>
 
-  <?php if (!isset($result_fechas)) { ?>
+  <?php if (!isset($eventos)) { ?>
 	<table align="center">
     <tr>
       <th>Nombre</th>
