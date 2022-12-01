@@ -3,9 +3,7 @@
     include("templates/header.php");
 ?>
 
-<?php 
-    $alerta = false;
-    if (!isset($_SESSION['username'])) {?>
+<?php if (!isset($_SESSION['username'])) {?>
     <section class="vh-100">
     <div class="container-fluid">
         <div class="row">

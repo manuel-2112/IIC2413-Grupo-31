@@ -56,15 +56,4 @@
     </a>
 </div>
 
-<?php if ($alerta){?>
-<div class="alert alert-warning alert-dismissible fade show" role="alert">
-  <h4 class="alert-heading">Los datos son incorrectos</h4>
-  <hr>
-  <p>Puede volver a intentarlo.</p>
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-<?php };
-$alerta = false;
-?>
-
 <?php include('../templates/footer.php') ?>

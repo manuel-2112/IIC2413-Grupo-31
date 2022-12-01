@@ -20,7 +20,6 @@
         } 
         else {
         $msg = 'Contraseña Incorrecta';
-        $alerta = true;
         header("Location: ../views/login.php?msg=$msg");
         }   
     }
