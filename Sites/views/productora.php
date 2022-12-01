@@ -8,14 +8,3 @@
 <?php
   include('../consultas/eventos_productora.php')
   ?>
-
-	<table align="center">
-    <tr>
-      <th>Nombre</th>
-    </tr>
-  <?php
-	foreach ($productoras as $productora) {
-  		echo "<tr> <td>$productora[0]</td> </tr>";
-	}
-  ?>
-	</table>

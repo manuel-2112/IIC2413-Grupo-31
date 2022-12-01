@@ -10,3 +10,13 @@
 	$result -> execute();
 	$productoras = $result -> fetchAll();
   ?>
+<table align="center">
+<tr>
+<th>Nombre</th>
+</tr>
+    <?php
+    foreach ($productoras as $productora) {
+        echo "<tr> <td>$productora[0]</td> </tr>";
+    }
+    ?>
+</table>
