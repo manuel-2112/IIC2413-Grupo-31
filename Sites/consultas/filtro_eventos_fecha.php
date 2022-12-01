@@ -10,11 +10,12 @@
     $fecha_termino = $_POST["fecha_termino"];
     echo $fecha_inicio;
 
- 	$query = "SELECT E.nombre as nombre FROM Evento as E, Productoras as P, ProductoraEvento as PE WHERE P.id_p = PE.id_p AND E.id_ev = PE.id_ev AND LOWER(P.nombre) = $name AND E.fecha_inicio >= '$fecha_inicio' AND E.fecha_termino <= '$fecha_termino';";
+ 	$query = "SELECT E.nombre as nombre FROM Evento as E, Productoras as P, ProductoraEvento as PE WHERE P.id_p = PE.id_p AND E.id_ev = PE.id_ev AND LOWER(P.nombre) = '$name' AND E.fecha_inicio >= '$fecha_inicio' AND E.fecha_termino <= '$fecha_termino';";
   echo $query;
 	$result = $db2 -> prepare($query);
 	$result -> execute();
 	$productoras = $result -> fetchAll();
+  echo(print_r($result))
 ?>
 
 	<table align="center">
