@@ -6,5 +6,5 @@
 </form>
 
 <?php
-  include('../consultas/eventos_productora.php')
+  include('consultas/eventos_productora.php')
   ?>
