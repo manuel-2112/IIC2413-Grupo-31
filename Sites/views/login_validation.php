@@ -20,8 +20,8 @@
         } 
         else {
         $msg = 'Contraseña Incorrecta';
-        header("Location: ../views/login.php?msg=$msg");
         echo '<script>alert("Existe un error al ingresar. Trate nuevamente.")</script>';
+        header("Location: ../views/login.php?msg=$msg");
         }   
     }
 ?>
