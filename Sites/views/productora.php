@@ -40,4 +40,15 @@
   ?>
 	</table>
 
-  <?php include('consultas/filtro_eventos_fecha.php') ?>
+  <?php if (!isset($result_fechas)) { ?>
+	<table align="center">
+    <tr>
+      <th>Nombre</th>
+    </tr>
+  <?php
+	foreach ($productoras as $productora) {
+  		echo "<tr> <td>$productora[0]</td> </tr>";
+	}
+  ?>
+	</table>
+<?php } ?>
