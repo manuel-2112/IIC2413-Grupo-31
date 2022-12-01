@@ -46,8 +46,8 @@
       <th>Nombre</th>
     </tr>
   <?php
-	foreach ($eventos as $eventos) {
-  		echo "<tr> <td>$productora[0]</td> </tr>";
+	foreach ($eventos as $evento) {
+  		echo "<tr> <td>$evento[0]</td> </tr>";
 	}
   ?>
 	</table>
