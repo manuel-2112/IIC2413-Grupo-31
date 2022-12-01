@@ -14,4 +14,5 @@
 	$result = $db2 -> prepare($query);
 	$result -> execute();
 	$productoras = $result_fechas -> fetchAll();
+  header('Location: ../index.php');
 ?>
