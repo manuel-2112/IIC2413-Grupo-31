@@ -20,7 +20,16 @@
         } 
         else {
         $msg = 'Contraseña Incorrecta';
-        header("Location: ../views/login.php?msg=$msg");
+        header("Location: ../views/login.php?msg=$msg"); ?>
+        
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <h4 class="alert-heading">Los datos son incorrectos</h4>
+        <hr>
+        <p>Revisalos y vuelve a intentar.</p>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        
+        <?php
         }   
     }
 ?>
