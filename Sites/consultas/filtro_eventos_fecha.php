@@ -5,7 +5,7 @@
 
     $name = str_replace('_',' ',$_SESSION['username']);
     #Llama a conexión, crea el objeto PDO y obtiene la variable $db
-    require("../config/connection.php");
+    require("config/connection.php");
     $fecha_inicio = $_POST["fecha_inicio"];
     $fecha_termino = $_POST["fecha_termino"];
     echo $fecha_inicio;
@@ -15,9 +15,8 @@
 	$result = $db2 -> prepare($query);
 	$result -> execute();
 	$productoras = $result -> fetchAll();
-  echo(print_r($result))
 ?>
-
+<?php if (!isset($result)) { ?>
 	<table align="center">
     <tr>
       <th>Nombre</th>
@@ -28,3 +27,4 @@
 	}
   ?>
 	</table>
+<?php } ?>

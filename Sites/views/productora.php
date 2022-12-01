@@ -39,3 +39,5 @@
 	}
   ?>
 	</table>
+
+  <?php include('consultas/filtro_eventos_fecha.php') ?>
