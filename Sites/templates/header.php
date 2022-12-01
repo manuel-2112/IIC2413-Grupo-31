@@ -8,3 +8,4 @@
         <title>E3 Grupo 31-32</title>
     </head>
     <body>
+        <?php $alerta = false; ?>
