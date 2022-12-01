@@ -32,8 +32,6 @@
                     <button type="submit" name="login" class="btn btn-outline-info">Ingresar</button>
                 </div>
 
-                <!-- <p>¿No tienes cuenta? <a href="#!" class="link-info">Registrarse</a></p> -->
-
             </form>
             <div class="position-absolute bottom-0 start-10">
                 <p> &#128512; Hecho por Grupos 31-32 2022-02</p>
