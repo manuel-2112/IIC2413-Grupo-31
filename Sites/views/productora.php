@@ -46,7 +46,7 @@
       <th>Nombre</th>
     </tr>
   <?php
-	foreach ($productoras as $productora) {
+	foreach ($eventos as $eventos) {
   		echo "<tr> <td>$productora[0]</td> </tr>";
 	}
   ?>
