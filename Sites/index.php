@@ -3,7 +3,7 @@
     include("templates/header.php");
 ?>
 
-<?php if ($_SESSION['tipo'] == 'Artista') {?>
+<?php if (!isset($_SESSION['username'])) {?>
     <section class="vh-100">
     <div class="container-fluid">
         <div class="row">
@@ -44,7 +44,7 @@
 </section>
 <?php } elseif ($_SESSION['tipo'] == 'Productora') {
     include('views/productora.php');
- } elseif (!isset($_SESSION['username'])) {
+ } elseif ($_SESSION['tipo'] == 'Artista') {
     include('views/artista.php');
  } ?>
 
