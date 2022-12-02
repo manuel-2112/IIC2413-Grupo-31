@@ -16,6 +16,8 @@
         $result_usuarios -> execute();
         $data_usuarios = $result_usuarios -> fetchAll();
 
+        echo(print_r($data_usuarios));
+
         foreach ($data_productoras as $productora){
             $query_copia = "SELECT insertar_productora('$productora[0]'::varchar, '$productora[1]'::varchar, '$productora[2]'::varchar)";
             $result_copia = $db -> prepare($copia);
