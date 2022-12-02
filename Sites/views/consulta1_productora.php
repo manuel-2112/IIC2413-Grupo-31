@@ -1,3 +1,8 @@
+<?php session_start(); ?>
+<?php
+    include("templates/header.php");
+?>
+
 <section class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
@@ -114,3 +119,5 @@
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
     <script src="js/datatables-simple-demo.js"></script>
 </section>
+
+<?php include('templates/footer.php') ?>
