@@ -12,6 +12,8 @@
     $result_id = $result_id -> fetchAll();
     echo(print_r($result_id) . "<br>");
     echo gettype($result_id) . "<br>";
+    echo($result_id[0][0]);
+    echo($result_id[0]);
     $id_ev = $result_id[0] + 1;
     
     $nombre = $_POST["nombre"];
