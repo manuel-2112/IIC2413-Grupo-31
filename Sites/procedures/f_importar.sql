@@ -4,9 +4,7 @@ RETURNS void AS $$
 
 DECLARE
   productora RECORD;
-  --artista RECORD;
   datos_productora RECORD;
-  --datos_artista RECORD;
   username_productora VARCHAR(100);
   contrasena_generada VARCHAR(30);
 
@@ -25,12 +23,6 @@ BEGIN
       SELECT floor(random()* (999999-100000 + 1) + 100000) INTO contrasena_generada;
       INSERT INTO usuarios (username, contrasena, tipo) VALUES (username_productora, contrasena_generada, 'Productora');
     END LOOP;
-
-    --FOR datos_artista IN (SELECT * FROM artistas)
-    --LOOP
-    --  SELECT floor(random()* (999999-100000 + 1) + 100000) INTO contrasena_generada;
-    --  INSERT INTO usuarios (username, contrasena, tipo) VALUES (datos_artista.nombre_escenico, contrasena_generada, 'Artista');
-    --END LOOP;
 
 END 
 $$ language plpgsql

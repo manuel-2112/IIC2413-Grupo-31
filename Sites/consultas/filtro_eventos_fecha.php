@@ -29,7 +29,7 @@
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="#!">Mi perfil</a></li>
                     <li>
-                      <form class="dropdown-item" action="views/logout.php" method="get">
+                      <form class="dropdown-item" action="../views/logout.php" method="get">
                           <input class="btn btn-outline-info" type="submit" value="Cerrar sesion" ></input>
                       </form>
                     </li>
@@ -48,15 +48,15 @@
                             Dashboard
                         </a>
                         <div class="sb-sidenav-menu-heading">Consultas</div>
-                        <a class="nav-link" href="consulta1_productora.php">
+                        <a class="nav-link" href="../views/consulta1_productora.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             Mis Eventos
                         </a>
-                        <a class="nav-link" href="consulta2_productora.php">
+                        <a class="nav-link" href="../views/consulta2_productora.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             Filtrar Eventos
                         </a>
-                        <a class="nav-link" href="form_nuevo_evento.php">
+                        <a class="nav-link" href="../views/form_nuevo_evento.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             Crear Evento
                         </a>
@@ -76,8 +76,7 @@
                       $fecha_inicio = $_POST["fecha_inicio"];
                       $fecha_termino = $_POST["fecha_termino"];
                     ?>
-                    <h4>Desde: <?php echo($fecha_inicio) ?></h4><br>
-                    <h4>Hasta: <?php echo($fecha_termino) ?></h4>
+                    <h4>Desde: <?php echo($fecha_inicio) ?> | Hasta: <?php echo($fecha_termino) ?></h4>
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item active">Productora</li>
                     </ol>
