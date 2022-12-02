@@ -19,10 +19,7 @@
         echo(print_r($data_usuarios));
 
         foreach ($data_usuarios as $productora){
-            echo($productora[0]);
-            echo($productora[1]);
-            echo($productora[2]);
-            $query_copia = "SELECT insertar_productora('$productora[0]'::varchar, '$productora[1]'::varchar, '$productora[2]'::varchar)";
+            $query_copia = "SELECT insertar_productora('$productora[1]'::varchar, '$productora[2]'::varchar, '$productora[3]'::varchar)";
             $result_copia = $db -> prepare($query_copia);
             $result_copia -> execute();
             $data_copia = $result_copia -> fetchAll();
