@@ -65,14 +65,14 @@
                           <div class="card bg-info text-white mb-4">
                               <div class="card-body">
                                 <a href="views/consulta1_productora.php"><div class="d-flex justify-content-between">
-                                  <p>Ver mis eventos</p>
+                                  <p>Mis eventos</p>
                                   <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                   </div></a>
                               </div>
                               
                               <div class="card-footer d-grid">
                                   <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#detalles1">
-                                      Lista todos los eventos de la productora.
+                                      Detalles
                                     </button>
                               </div>
                           </div>
@@ -119,11 +119,11 @@
                           <div class="modal-dialog">
                               <div class="modal-content">
                               <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Detalles Consulta 1</h1>
+                                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Detalles: Mis eventos</h1>
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                               </div>
                               <div class="modal-body">
-                                  Aca va la explicacion de la consulta
+                                Lista todos los eventos de la productora.
                               </div>
                               </div>
                           </div>
