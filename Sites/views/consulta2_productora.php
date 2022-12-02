@@ -29,7 +29,7 @@
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="#!">Mi perfil</a></li>
                     <li>
-                      <form class="dropdown-item" action="views/logout.php" method="get">
+                      <form class="dropdown-item" action="logout.php" method="get">
                           <input class="btn btn-outline-info" type="submit" value="Cerrar sesion" ></input>
                       </form>
                     </li>
