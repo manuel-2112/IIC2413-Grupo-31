@@ -69,6 +69,7 @@
                             <thead>
                                 <tr>
                                 <th>Nombre Evento</th>
+                                <th>Detalles</th>
                                 </tr>
                             </thead>
                             <tbody>
