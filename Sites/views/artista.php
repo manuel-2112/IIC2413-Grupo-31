@@ -80,7 +80,8 @@
 
                                 ?>
                                 <form action="consultas/detalles_evento.php" method="post"> 
-                                   <input type = 'submit' class='btn btn-info' value="<?php $evento[0] ?>" name = 'evento'>Ver detalles</input>
+                                   <input type = 'submit'  value='<?php $evento[0] ?>' name = 'evento'>
+                                   <input type="submit" class='btn btn-info' value="Detalles">
                                 </form>
                                 <?php echo("</td></tr>"); } ?>
                               </tbody>
