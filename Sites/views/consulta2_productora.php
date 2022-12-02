@@ -76,7 +76,7 @@
                         <li class="breadcrumb-item active">Productora</li>
                     </ol>
                     <div class="row">
-                    <form align="center" action="consultas/filtro_eventos_fecha.php" method="post">
+                    <form align="center" action="../consultas/filtro_eventos_fecha.php" method="post">
                         Fecha inicio:
                         <input type="date" name="fecha_inicio">
                         <br/><br/>
