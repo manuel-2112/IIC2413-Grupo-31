@@ -1,5 +1,5 @@
 <h2>Crear nuevo Evento</h2>
-<form action="consultas/agregar_evento.php" method="post">
+<form action="../consultas/agregar_evento.php" method="post">
     Nombre evento
     <input type = 'text' name = 'nombre'>
     Fecha de inicio:
