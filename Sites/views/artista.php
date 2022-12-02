@@ -1,8 +1,9 @@
-<h1>Bienvenido/a: <?php echo $_SESSION['username'] ?> Artista</h1>
 
 <?php session_start(); ?>
+<h1>Bienvenido/a: <?php echo $_SESSION['username'] ?> Artista</h1>
+
 <?php
-    include("../templates/header.php");
+    include("templates/header.php");
 ?>
 
 <head>
@@ -42,28 +43,6 @@
     <div id="layoutSidenav">
         <div id="layoutSidenav_nav">
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-                <div class="sb-sidenav-menu">
-                    <div class="nav">
-                        <div class="sb-sidenav-menu-heading">Inicio</div>
-                        <a class="nav-link" href="../index.php">
-                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                            Dashboard
-                        </a>
-                        <div class="sb-sidenav-menu-heading">Consultas</div>
-                        <a class="nav-link" href="consulta1_productora.php">
-                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                            Mis Eventos
-                        </a>
-                        <a class="nav-link" href="consulta2_productora.php">
-                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                            Filtrar Eventos
-                        </a>
-                        <a class="nav-link" href="form_nuevo_evento.php">
-                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                            Crear Evento
-                        </a>
-                    </div>
-                </div>
                 <div class="sb-sidenav-footer">
                     <div class="small">Registrado como:</div>
                     <?php echo $_SESSION['username'] ?>
@@ -81,7 +60,7 @@
                     <h4>Desde: <?php echo($fecha_inicio) ?></h4><br>
                     <h4>Hasta: <?php echo($fecha_termino) ?></h4>
                     <ol class="breadcrumb mb-4">
-                        <li class="breadcrumb-item active">Productora</li>
+                        <li class="breadcrumb-item active">Evento</li>
                     </ol>
                     <div class="row">
                     <?php
