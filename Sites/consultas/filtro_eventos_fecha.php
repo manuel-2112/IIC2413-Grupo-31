@@ -14,5 +14,15 @@
 	$result_fechas = $db2 -> prepare($query);
 	$result_fechas -> execute();
 	$eventos = $result_fechas -> fetchAll();
-  header('Location: ../index.php');
 ?>
+
+<table align="center">
+  <tr>
+    <th>Nombre</th>
+  </tr>
+<?php
+  foreach ($eventos as $evento) {
+    echo "<tr> <td>$evento[0]</td> </tr>";
+}
+?>
+</table>
