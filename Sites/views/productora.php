@@ -39,11 +39,11 @@
                         </a>
                         <a class="nav-link" href="views/consulta2_productora.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                            Consulta 2
+                            Filtrar Eventos por Fecha
                         </a>
                         <a class="nav-link" href="views/form_nuevo_evento.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                            Crear Nuevo Evento
+                            Crear Evento
                         </a>
                     </div>
                 </div>
@@ -133,11 +133,11 @@
                           <div class="modal-dialog">
                               <div class="modal-content">
                               <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Detalles Consulta 2</h1>
+                                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Detalles: Filtrar Eventos por Fecha</h1>
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                               </div>
                               <div class="modal-body">
-                                  Aca va la explicacion de la consulta
+                                  Esta consulta permite filtrar mis eventos por fecha.
                               </div>
                               </div>
                           </div>
@@ -147,11 +147,11 @@
                           <div class="modal-dialog">
                               <div class="modal-content">
                               <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Detalles Consulta 3</h1>
+                                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Detalles: Crear Evento</h1>
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                               </div>
                               <div class="modal-body">
-                                  Aca va la explicacion de la consulta
+                                  Esta consulta permite crear un nuevo evento.
                               </div>
                               </div>
                           </div>
