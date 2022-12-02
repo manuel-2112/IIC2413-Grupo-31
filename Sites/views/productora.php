@@ -98,7 +98,7 @@
                       <div class="col-xl-3 col-md-6">
                           <div class="card bg-info text-white mb-4">
                               <div class="card-body">
-                                  <a href="views/consulta3_productora.php"><div class="d-flex justify-content-between">
+                                  <a href="views/form_nuevo_evento.php"><div class="d-flex justify-content-between">
                                   <p>Crear Eventos</p>
                                   <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                   </div></a>
