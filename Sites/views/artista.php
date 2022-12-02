@@ -75,7 +75,7 @@
                             <tbody>
                             <?php
                               foreach ($eventos as $evento) {
-                                echo("<tr> <td>$evento[0]</td><td></td> "); 
+                                echo("<tr> <td>$evento[0]</td>"); 
                                 echo("<td>");
 
                                 ?>
