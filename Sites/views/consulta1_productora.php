@@ -16,7 +16,7 @@
 <section class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="index.php">Entrega 3</a>
+        <a class="navbar-brand ps-3" href="../index.php">Entrega 3</a>
         <!-- Sidebar Toggle-->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
         <!-- Navbar Search-->
@@ -48,15 +48,15 @@
                             Dashboard
                         </a>
                         <div class="sb-sidenav-menu-heading">Consultas</div>
-                        <a class="nav-link" href="views/consulta1_productora.php">
+                        <a class="nav-link" href="consulta1_productora.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             Consulta 1
                         </a>
-                        <a class="nav-link" href="views/consulta2_productora.php">
+                        <a class="nav-link" href="consulta2_productora.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             Consulta 2
                         </a>
-                        <a class="nav-link" href="views/consulta3_productora.php">
+                        <a class="nav-link" href="consulta3_productora.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             Consulta 3
                         </a>
