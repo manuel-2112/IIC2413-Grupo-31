@@ -33,15 +33,15 @@
                             Dashboard
                         </a>
                         <div class="sb-sidenav-menu-heading">Consultas</div>
-                        <a class="nav-link" href="index.php">
+                        <a class="nav-link" href="consulta1_productora.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             Consulta 1
                         </a>
-                        <a class="nav-link" href="index.php">
+                        <a class="nav-link" href="consulta2_productora.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             Consulta 2
                         </a>
-                        <a class="nav-link" href="index.php">
+                        <a class="nav-link" href="consulta3_productora.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             Consulta 3
                         </a>
