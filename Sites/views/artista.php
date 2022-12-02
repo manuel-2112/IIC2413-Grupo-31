@@ -48,7 +48,38 @@
                         <li class="breadcrumb-item active">Artista</li>
                     </ol>
                     <div class="row">
-                      Aca va el contenido...                     
+                      Aca va el contenido... 
+                      <?php
+                      $name = str_replace('_',' ',$_SESSION['username']);
+                      #Llama a conexión, crea el objeto PDO y obtiene la variable $db
+                      require("../config/connection.php");
+                      $query = "SELECT E.nombre FROM Eventos as E, Artistas as A WHERE A.aid = E.aid AND LOWER(A.nombre_escenico) = '$name'";
+                      $result = $db -> prepare($query);
+                      $result -> execute();
+                      $eventos = $result_fechas -> fetchAll();
+                    ?>
+
+                    <div class="card mb-4">
+                    <div class="card-header">
+                        <i class="fas fa-table me-1"></i>
+                        Resultados
+                    </div>
+                    <div class="card-body">
+                        <table id="datatablesSimple">
+                            <thead>
+                                <tr>
+                                <th>Nombre Evento</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <?php
+                              foreach ($eventos as $evento) {
+                                echo("<tr> <td>$evento[0]</td><td></td> </tr>"); ?>
+                                <form action="consultas/detalles_evento.php" method="post"> 
+                                   <button type = 'sumbit' value="<?php $evento[0] ?>" name = 'evento'>Ver detalles</button>
+                                </form>
+        
+                              <?php } ?>                    
                     
                     </div>
             </main>
