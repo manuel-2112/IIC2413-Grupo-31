@@ -24,7 +24,5 @@ BEGIN
       INSERT INTO usuarios (username, contrasena, tipo) VALUES (username_productora, contrasena_generada, 'Artista');
     END LOOP;
 
-    RETURN QUERY SELECT * FROM usuarios; 
-
 END
 $$ language plpgsql
