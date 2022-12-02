@@ -6,7 +6,7 @@
     $name = str_replace('_',' ',$_SESSION['username']);
     #Llama a conexión, crea el objeto PDO y obtiene la variable $db
     require("../config/connection.php");
-    $query = "SELECT E.id_ev FROM Eventos as E WHERE E.id_ev = MAX(E.id_ev)";
+    $query = "SELECT MAX(E.id_ev) as maximo FROM Evento as E";
     $result_id = $db2 -> prepare($query);
 	$result_id -> execute();
     $result_id = $result_id -> fetchAll();
