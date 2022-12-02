@@ -70,6 +70,7 @@
                       #Llama a conexión, crea el objeto PDO y obtiene la variable $db
                       require("../config/connection.php");
                       $query = "SELECT L.recinto, E.fecha FROM Eventos as E, Lugar as L WHERE E.lid = L.lid AND LOWER(E.nombre) = '$nombre_evento';";
+                      echo $query;
                       $result = $db -> prepare($query);
                       $result -> execute();
                       $recintos = $result -> fetchAll();
