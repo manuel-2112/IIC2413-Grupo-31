@@ -33,21 +33,17 @@
                             Dashboard
                         </a>
                         <div class="sb-sidenav-menu-heading">Consultas</div>
-                        <a class="nav-link" href="index.php">
+                        <a class="nav-link" href="views/consulta1_productora.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             Consulta 1
                         </a>
-                        <a class="nav-link" href="index.php">
+                        <a class="nav-link" href="views/consulta2_productora.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             Consulta 2
                         </a>
-                        <a class="nav-link" href="index.php">
+                        <a class="nav-link" href="views/consulta3_productora.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             Consulta 3
-                        </a>
-                        <a class="nav-link" href="index.php">
-                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                            Consulta 4
                         </a>
                     </div>
                 </div>
@@ -68,7 +64,7 @@
                       <div class="col-xl-3 col-md-6">
                           <div class="card bg-info text-white mb-4">
                               <div class="card-body">
-                                  <a href="#"><div class="d-flex justify-content-between">
+                                <a class="nav-link" href="views/consulta1_productora.php">
                                   <p>Consulta 1</p>
                                   <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                   </div></a>
