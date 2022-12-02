@@ -93,6 +93,8 @@
                               foreach ($recintos as $recinto) {
                                 echo("<tr> <td>$recinto[0]</td><td></td> "); 
                                 echo("<td>"); } ?>  
+                            </tbody>
+                        </table>
                     </div>
             </main>
             <footer class="py-4 bg-light mt-auto">
