@@ -28,9 +28,8 @@
             </ul>
           </li>
         </ul>
-        <form action="views/logout.php" method="get">
+        <form class="d-flex mt-3" action="views/logout.php" method="get">
           <input type="submit" value="Cerrar sesion" class="btn btn-succes">
-        </form>
         </form>
       </div>
     </div>
