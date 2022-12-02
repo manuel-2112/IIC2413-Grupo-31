@@ -16,7 +16,7 @@
             $_SESSION['tipo'] = $tipo;
 
             $msg = 'se ha iniciado sesion correctamente';
-            header("Location: ../index.php?msg=$msg");
+            header("Location: ../index.php");
         } 
         else {
         $msg = 'Contraseña Incorrecta';
