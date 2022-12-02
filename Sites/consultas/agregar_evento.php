@@ -16,7 +16,7 @@
     $fecha_inicio = $_POST["fecha_inicio"];
     $fecha_termino = $_POST["fecha_termino"];
     $estado = 'en espera';
- 	$query = "INSERT INTO Eventos (id_ev, nombre,fecha_inicio, fecha_termino)
+ 	$query = "INSERT INTO Evento (id_ev, nombre,fecha_inicio, fecha_termino)
      VALUES ($id_ev, '$nombre', '$fecha_inicio', '$fecha_termino')";
      echo($query);
 	$result_agregar_evento = $db2 -> prepare($query);
