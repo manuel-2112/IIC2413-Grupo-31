@@ -35,15 +35,15 @@
                         <div class="sb-sidenav-menu-heading">Consultas</div>
                         <a class="nav-link" href="views/consulta1_productora.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                            Consulta 1
+                            Mis Eventos
                         </a>
                         <a class="nav-link" href="views/consulta2_productora.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                            Consulta 2
+                            Filtrar Eventos
                         </a>
                         <a class="nav-link" href="views/form_nuevo_evento.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                            Crear Nuevo Evento
+                            Crear Evento
                         </a>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                           <div class="card bg-info text-white mb-4">
                               <div class="card-body">
                                 <a href="views/consulta1_productora.php"><div class="d-flex justify-content-between">
-                                  <p>Consulta 1</p>
+                                  <p>Mis eventos</p>
                                   <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                   </div></a>
                               </div>
@@ -82,7 +82,7 @@
                           <div class="card bg-info text-white mb-4">
                               <div class="card-body">
                                   <a href="views/consulta2_productora.php"><div class="d-flex justify-content-between">
-                                  <p>Consulta 2</p>
+                                  <p>Filtrar Eventos</p>
                                   <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                   </div></a>
                               </div>
@@ -98,8 +98,8 @@
                       <div class="col-xl-3 col-md-6">
                           <div class="card bg-info text-white mb-4">
                               <div class="card-body">
-                                  <a href="views/consulta3_productora.php"><div class="d-flex justify-content-between">
-                                  <p>Consulta 3</p>
+                                  <a href="views/form_nuevo_evento.php"><div class="d-flex justify-content-between">
+                                  <p>Crear Eventos</p>
                                   <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                   </div></a>
                               </div>
@@ -119,11 +119,11 @@
                           <div class="modal-dialog">
                               <div class="modal-content">
                               <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Detalles Consulta 1</h1>
+                                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Detalles: Mis eventos</h1>
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                               </div>
                               <div class="modal-body">
-                                  Aca va la explicacion de la consulta
+                                Lista todos los eventos de la productora.
                               </div>
                               </div>
                           </div>
@@ -133,11 +133,11 @@
                           <div class="modal-dialog">
                               <div class="modal-content">
                               <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Detalles Consulta 2</h1>
+                                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Detalles: Filtrar Eventos por Fecha</h1>
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                               </div>
                               <div class="modal-body">
-                                  Aca va la explicacion de la consulta
+                                  Esta consulta permite filtrar mis eventos por fecha.
                               </div>
                               </div>
                           </div>
@@ -147,11 +147,11 @@
                           <div class="modal-dialog">
                               <div class="modal-content">
                               <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Detalles Consulta 3</h1>
+                                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Detalles: Crear Evento</h1>
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                               </div>
                               <div class="modal-body">
-                                  Aca va la explicacion de la consulta
+                                  Esta consulta permite crear un nuevo evento.
                               </div>
                               </div>
                           </div>
