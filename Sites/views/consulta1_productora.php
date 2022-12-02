@@ -65,7 +65,6 @@
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item active">Productora</li>
                     </ol>
-                    
                     <?php
                         $name = str_replace('_',' ',$_SESSION['username']);
                         #Llama a conexión, crea el objeto PDO y obtiene la variable $db
@@ -101,6 +100,7 @@
                         </table>
                     </div>
                     </div>
+                    
             </main>
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">
@@ -116,9 +116,9 @@
             </footer>
         </div>
     </div>
-    <script src="js/scripts.js"></script>
+    <script src="../js/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-    <script src="js/datatables-simple-demo.js"></script>
+    <script src="../js/datatables-simple-demo.js"></script>
 </section>
 
 <?php include('../templates/footer.php') ?>
