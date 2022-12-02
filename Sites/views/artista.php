@@ -74,12 +74,14 @@
                             <tbody>
                             <?php
                               foreach ($eventos as $evento) {
-                                echo("<tr> <td>$evento[0]</td><td></td> </tr>"); ?>
+                                echo("<tr> <td>$evento[0]</td><td></td> "); 
+                                echo("<td>");
+
+                                ?>
                                 <form action="consultas/detalles_evento.php" method="post"> 
                                    <button type = 'sumbit' value="<?php $evento[0] ?>" name = 'evento'>Ver detalles</button>
                                 </form>
-        
-                              <?php } ?>                    
+                                <?php echo("</td></tr>"); } ?>                    
                     
                     </div>
             </main>
