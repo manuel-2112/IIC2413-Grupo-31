@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php
-    include("templates/header.php");
+    include("../templates/header.php");
 ?>
 
 <section class="sb-nav-fixed">
@@ -120,4 +120,4 @@
     <script src="js/datatables-simple-demo.js"></script>
 </section>
 
-<?php include('templates/footer.php') ?>
+<?php include('../templates/footer.php') ?>
