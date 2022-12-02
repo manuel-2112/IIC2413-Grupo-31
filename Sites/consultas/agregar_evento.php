@@ -12,7 +12,7 @@
     $result_id = $result_id -> fetchAll();
     echo(print_r($result_id) . "<br>");
     echo gettype($result_id) . "<br>";
-    $id_ev = $result_id + 1;
+    $id_ev = $result_id[0] + 1;
     
     $nombre = $_POST["nombre"];
     $fecha_inicio = $_POST["fecha_inicio"];
