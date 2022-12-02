@@ -1,10 +1,6 @@
 CREATE OR REPLACE FUNCTION importar_productoras()
 
-RETURNS table (
-  username VARCHAR,
-  contrasena VARCHAR,
-  tipo VARCHAR
-) AS $$
+RETURNS void AS $$
 
 DECLARE
   productora RECORD;
