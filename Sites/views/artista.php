@@ -81,7 +81,9 @@
                                 <form action="consultas/detalles_evento.php" method="post"> 
                                    <button type = 'sumbit' value="<?php $evento[0] ?>" name = 'evento'>Ver detalles</button>
                                 </form>
-                                <?php echo("</td></tr>"); } ?>                    
+                                <?php echo("</td></tr>"); } ?>
+                              </tbody>
+                        </table>                  
                     
                     </div>
             </main>
