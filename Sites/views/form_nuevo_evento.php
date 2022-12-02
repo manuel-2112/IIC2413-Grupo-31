@@ -78,15 +78,15 @@
                     </ol>
                     <div class="row">
                     <form action="../consultas/agregar_evento.php" method="post">
-                        Nombre evento
-                        <input type = 'text' name = 'nombre'>
-                        Fecha de inicio:
-                        <input type = 'date' name = 'fecha_inicio'>
-                        Fecha de termino:
-                        <input type = 'date' name = 'fecha_termino'>
-                        Artista invitado:
-                        <input type = 'text' name = 'artista'>
-                        <button style="width:500px" type="submit" class="btn btn-outline-info btn-lg btn-block">Crear Evento</button>
+                        Nombre evento<br>
+                        <input type = 'text' name = 'nombre'><br>
+                        Fecha de inicio:<br>
+                        <input type = 'date' name = 'fecha_inicio'><br>
+                        Fecha de termino:<br>
+                        <input type = 'date' name = 'fecha_termino'><br>
+                        Artista invitado:<br>
+                        <input type = 'text' name = 'artista'><br>
+                        <button style="width:500px" type="submit" class="btn btn-outline-info btn-lg btn-block">Crear Evento</button><br>
                     </form>
                     </div>
             </main>
