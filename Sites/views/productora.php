@@ -39,7 +39,7 @@
                         </a>
                         <a class="nav-link" href="views/consulta2_productora.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                            Filtrar Eventos por Fecha
+                            Filtrar Eventos
                         </a>
                         <a class="nav-link" href="views/form_nuevo_evento.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
@@ -82,7 +82,7 @@
                           <div class="card bg-info text-white mb-4">
                               <div class="card-body">
                                   <a href="views/consulta2_productora.php"><div class="d-flex justify-content-between">
-                                  <p>Consulta 2</p>
+                                  <p>Filtrar Eventos</p>
                                   <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                   </div></a>
                               </div>
@@ -99,7 +99,7 @@
                           <div class="card bg-info text-white mb-4">
                               <div class="card-body">
                                   <a href="views/consulta3_productora.php"><div class="d-flex justify-content-between">
-                                  <p>Consulta 3</p>
+                                  <p>Crear Eventos</p>
                                   <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                   </div></a>
                               </div>

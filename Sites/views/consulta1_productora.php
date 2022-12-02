@@ -54,11 +54,11 @@
                         </a>
                         <a class="nav-link" href="consulta2_productora.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                            Filtrar Eventos por Fecha
+                            Filtrar Eventos
                         </a>
                         <a class="nav-link" href="form_nuevo_evento.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                            Crear Nuevo Evento
+                            Crear Evento
                         </a>
                     </div>
                 </div>
