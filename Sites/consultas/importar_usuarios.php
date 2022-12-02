@@ -10,6 +10,7 @@
         $result_productoras = $db2 -> prepare($query_productoras);
         $result_productoras -> execute();
         $data_productoras = $result_productoras -> fetchAll();
+        echo(print_r($data_productoras));
 
         foreach ($data_productoras as $productora){
             $query_copia = "SELECT insertar_productora('$productora[0]'::varchar, '$productora[1]'::varchar, '$productora[2]'::varchar)";
