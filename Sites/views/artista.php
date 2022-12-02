@@ -56,7 +56,7 @@
                       $query = "SELECT E.nombre FROM Eventos as E, Artistas as A WHERE A.aid = E.aid AND LOWER(A.nombre_escenico) = '$name'";
                       $result = $db -> prepare($query);
                       $result -> execute();
-                      $eventos = $result_fechas -> fetchAll();
+                      $eventos = $result -> fetchAll();
                     ?>
 
                     <div class="card mb-4">
