@@ -41,9 +41,9 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             Consulta 2
                         </a>
-                        <a class="nav-link" href="views/consulta3_productora.php">
+                        <a class="nav-link" href="views/form_nuevo_evento.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                            Consulta 3
+                            Crear Nuevo Evento
                         </a>
                     </div>
                 </div>
@@ -112,17 +112,6 @@
                           </div>
                       </div>
                       
-                      <form action="consultas/agregar_evento.php" method="post">
-                      Nombre evento
-                      <input type = 'text' name = 'nombre'>
-                      Fecha de inicio:
-                      <input type = 'date' name = 'fecha_inicio'>
-                      Fecha de termino:
-                      <input type = 'date' name = 'fecha_termino'>
-                      Artista invitado:
-                      <input type = 'text' name = 'artista'>
-                      <button style="width:500px" type="submit" class="btn btn-outline-info btn-lg btn-block">Crear Evento</button>
-                      </form>
                     
                     </div>
 
