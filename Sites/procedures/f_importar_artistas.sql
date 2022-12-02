@@ -12,10 +12,10 @@ BEGIN
 
     FOR datos_artista IN (SELECT * FROM artistas)
     LOOP
-      SELECT lower(datos_productora.nombre) INTO username_productora;
+      SELECT lower(datos_artista.nombre_escenico) INTO username_artista;
       SELECT REPLACE(username_artista, ' ', '_') INTO username_artista;
       SELECT floor(random()* (999999-100000 + 1) + 100000) INTO contrasena_generada;
-      INSERT INTO usuarios (username, contrasena, tipo) VALUES (datos_artista.nombre_escenico, contrasena_generada, 'Artista');
+      INSERT INTO usuarios (username, contrasena, tipo) VALUES (username_artista, contrasena_generada, 'Artista');
     END LOOP;
 
 END 

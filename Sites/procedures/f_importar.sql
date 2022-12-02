@@ -1,6 +1,10 @@
-CREATE OR REPLACE FUNCTION importar_usuario()
+CREATE OR REPLACE FUNCTION importar_productoras()
 
-RETURNS void AS $$
+RETURNS table (
+  username VARCHAR,
+  contrasena VARCHAR,
+  tipo VARCHAR
+) AS $$
 
 DECLARE
   productora RECORD;
@@ -9,8 +13,8 @@ DECLARE
   contrasena_generada VARCHAR(30);
 
 BEGIN
-  DROP TABLE IF EXISTS usuarios;
-  CREATE TABLE IF NOT EXISTS usuarios (
+    DROP TABLE IF EXISTS usuarios;
+    CREATE TABLE IF NOT EXISTS usuarios (
     id SERIAL PRIMARY KEY,
     username varchar(100),
     contrasena varchar(30),
@@ -21,8 +25,10 @@ BEGIN
       SELECT lower(datos_productora.nombre) INTO username_productora;
       SELECT REPLACE(username_productora, ' ', '_') INTO username_productora;
       SELECT floor(random()* (999999-100000 + 1) + 100000) INTO contrasena_generada;
-      INSERT INTO usuarios (username, contrasena, tipo) VALUES (username_productora, contrasena_generada, 'Productora');
+      INSERT INTO usuarios (username, contrasena, tipo) VALUES (username_productora, contrasena_generada, 'Artista');
     END LOOP;
 
-END 
+    RETURN QUERY SELECT * FROM usuarios; 
+
+END
 $$ language plpgsql
