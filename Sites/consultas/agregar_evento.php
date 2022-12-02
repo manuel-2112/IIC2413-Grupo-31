@@ -43,5 +43,5 @@
 	$result -> execute();
     $final_result = $result -> fetchAll();
 
-    echo($final_result[0])
+    echo(print_r($final_result))
 ?>
