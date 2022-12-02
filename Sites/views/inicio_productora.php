@@ -15,7 +15,7 @@
         </div>
     </div>
 </div>
-</div>
+
 <div class="col-xl-3 col-md-6">
     <div class="card bg-info text-white mb-4">
         <div class="card-body">
@@ -32,7 +32,7 @@
         </div>
     </div>
 </div>
-</div>
+
 <div class="col-xl-3 col-md-6">
     <div class="card bg-info text-white mb-4">
         <div class="card-body">
@@ -50,7 +50,6 @@
     </div>
 </div>
 </div>
-
 
 <div class="modal fade" id="detalles1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
