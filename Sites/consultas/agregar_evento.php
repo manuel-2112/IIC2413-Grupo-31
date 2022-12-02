@@ -9,7 +9,7 @@
     $query = "SELECT E.id_ev FROM Eventos as E WHERE E.id_ev = MAX(E.id_ev)";
     $result_id = $db2 -> prepare($query);
 	$result_id -> execute();
-    $result__id = $result__id -> fetchAll();
+    $result_id = $result_id -> fetchAll();
     $id_ev = $result_id + 1;
     
     $nombre = $_POST["nombre"];

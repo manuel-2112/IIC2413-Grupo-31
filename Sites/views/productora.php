@@ -47,17 +47,6 @@
                         </a>
                     </div>
                 </div>
-                <form action="consultas/agregar_evento.php" method="post">
-                    nombre evento
-                    <input type = 'text' name = 'nombre'>
-                    fecha de inicio:
-                    <input type = 'date' name = 'fecha_inicio'>
-                    fecha de termino:
-                    <input type = 'date' name = 'fecha_termino'>
-                    artista invitado:
-                    <input type = 'text' name = 'artista'>
-                    <button style="width:500px" type="submit" class="btn btn-outline-info btn-lg btn-block">Crear Evento</button>
-                </form>
                 <div class="sb-sidenav-footer">
                     <div class="small">Registrado como:</div>
                     <?php echo $_SESSION['username'] ?>
@@ -122,7 +111,20 @@
                               </div>
                           </div>
                       </div>
-                      </div>
+                      
+                      <form action="consultas/agregar_evento.php" method="post">
+                      Nombre evento
+                      <input type = 'text' name = 'nombre'>
+                      Fecha de inicio:
+                      <input type = 'date' name = 'fecha_inicio'>
+                      Fecha de termino:
+                      <input type = 'date' name = 'fecha_termino'>
+                      Artista invitado:
+                      <input type = 'text' name = 'artista'>
+                      <button style="width:500px" type="submit" class="btn btn-outline-info btn-lg btn-block">Crear Evento</button>
+                      </form>
+                    
+                    </div>
 
                       <div class="modal fade" id="detalles1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                           <div class="modal-dialog">
