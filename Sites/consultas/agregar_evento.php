@@ -17,28 +17,33 @@
     $fecha_termino = $_POST["fecha_termino"];
     $estado = 'en espera';
  	$query = "INSERT INTO Eventos (id_ev, nombre,fecha_inicio, fecha_termino)
-     VALUES ($id_ev, $nombre, $fecha_inicio, $fecha_termino)";
+     VALUES ($id_ev, '$nombre', '$fecha_inicio', '$fecha_termino')";
+     echo($query);
 	$result_agregar_evento = $db2 -> prepare($query);
 	$result_agregar_evento -> execute();
 
     $query = "SELECT P.id_p FROM Productoras as P WHERE LOWER(P.nombre) = '$name'";
+    echo($query);
     $result_p_id = $db2 -> prepare($query);
 	$result_p_id -> execute();
     $result_p_id = $result_p_id -> fetchAll();
     $id_p = $result_p_id[0][0];
 
     $query = "INSERT INTO ProductoraEvento (id_p, id_ev) VALUES($id_p, $id_ev)";
+    echo($query);
     $result = $db2 -> prepare($query);
 	$result -> execute();
 
     $artista = $_POST["artista"];
     $query = "SELECT A.id_a FROM Artistas as A WHERE A.nombre = '$artista'";
+    echo($query);
 	$result_artista = $db2 -> prepare($query);
 	$result_artista -> execute();
     $result_artista = $result_artista -> fetchAll();
     $valor_result_artista = $result_artista[0][0];
 
     $query = "INSERT INTO ArtistaEvento (id_a, id_ev) VALUES($valor_result_artista, $id_ev)";
+    echo($query);
     $result = $db2 -> prepare($query);
 	$result -> execute();
     $final_result = $result -> fetchAll();
