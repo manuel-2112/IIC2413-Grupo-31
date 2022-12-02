@@ -10,7 +10,7 @@
     $result_id = $db2 -> prepare($query);
 	$result_id -> execute();
     $result_id = $result_id -> fetchAll();
-    echo("<p>'$result_id'</p>");
+    echo(print_r($result_id) . "<br>");
     echo gettype($result_id) . "<br>";
     $id_ev = $result_id + 1;
     
