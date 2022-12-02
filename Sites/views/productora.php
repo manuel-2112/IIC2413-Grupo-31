@@ -47,6 +47,17 @@
                         </a>
                     </div>
                 </div>
+                <form action="consultas/agregar_evento.php" method="post">
+                    nombre evento
+                    <input type = 'text' name = 'nombre'>
+                    fecha de inicio:
+                    <input type = 'date' name = 'fecha_inicio'>
+                    fecha de termino:
+                    <input type = 'date' name = 'fecha_termino'>
+                    artista invitado:
+                    <input type = 'text' name = 'artista'>
+                    <button style="width:500px" type="submit" class="btn btn-outline-info btn-lg btn-block">Crear Evento</button>
+                </form>
                 <div class="sb-sidenav-footer">
                     <div class="small">Registrado como:</div>
                     <?php echo $_SESSION['username'] ?>
