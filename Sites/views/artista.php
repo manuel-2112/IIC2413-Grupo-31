@@ -52,7 +52,7 @@
                       <?php
                       $name = str_replace('_',' ',$_SESSION['username']);
                       #Llama a conexión, crea el objeto PDO y obtiene la variable $db
-                      require("../config/connection.php");
+                      require("config/connection.php");
                       $query = "SELECT E.nombre FROM Eventos as E, Artistas as A WHERE A.aid = E.aid AND LOWER(A.nombre_escenico) = '$name'";
                       $result = $db -> prepare($query);
                       $result -> execute();
