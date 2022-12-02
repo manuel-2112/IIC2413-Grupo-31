@@ -35,7 +35,7 @@
                         <div class="sb-sidenav-menu-heading">Consultas</div>
                         <a class="nav-link" href="views/consulta1_productora.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                            Consulta 1
+                            Mis Eventos
                         </a>
                         <a class="nav-link" href="views/consulta2_productora.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
@@ -65,14 +65,14 @@
                           <div class="card bg-info text-white mb-4">
                               <div class="card-body">
                                 <a href="views/consulta1_productora.php"><div class="d-flex justify-content-between">
-                                  <p>Consulta 1</p>
+                                  <p>Ver mis eventos</p>
                                   <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                   </div></a>
                               </div>
                               
                               <div class="card-footer d-grid">
                                   <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#detalles1">
-                                      Detalles
+                                      Lista todos los eventos de la productora.
                                     </button>
                               </div>
                           </div>
