@@ -1,7 +1,22 @@
+<?php session_start(); ?>
+<?php
+    include("../templates/header.php");
+?>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+</head>
+
 <section class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="index.php">Entrega 3</a>
+        <a class="navbar-brand ps-3" href="../index.php">Entrega 3</a>
         <!-- Sidebar Toggle-->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
         <!-- Navbar Search-->
@@ -14,7 +29,7 @@
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="#!">Mi perfil</a></li>
                     <li>
-                      <form class="dropdown-item" action="views/logout.php" method="get">
+                      <form class="dropdown-item" action="../views/logout.php" method="get">
                           <input class="btn btn-outline-info" type="submit" value="Cerrar sesion" ></input>
                       </form>
                     </li>
@@ -28,7 +43,7 @@
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading">Inicio</div>
-                        <a class="nav-link" href="index.php">
+                        <a class="nav-link" href="../index.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                             Dashboard
                         </a>
@@ -43,17 +58,17 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-4">Dashboard</h1>
+                    <h1 class="mt-4">Filtrar Eventos</h1><br>
                     <ol class="breadcrumb mb-4">
-                        <li class="breadcrumb-item active">Artista</li>
+                        <li class="breadcrumb-item active">Productora</li>
                     </ol>
                     <div class="row">
-                      Aca va el contenido... 
-                      <?php
+                    Contenido aca
+                    <?php
                       $name = str_replace('_',' ',$_SESSION['username']);
                       $nombre_evento = $_POST['evento'];
                       #Llama a conexión, crea el objeto PDO y obtiene la variable $db
-                      require("config/connection.php");
+                      require("../config/connection.php");
                       $query = "SELECT L.recinto, E.fecha FROM Eventos as E, Lugar as L WHERE E.lid = L.lid AND LOWER(E.nombre) = '$nombre_evento';";
                       $result = $db -> prepare($query);
                       $result -> execute();
@@ -76,14 +91,7 @@
                             <?php
                               foreach ($recintos as $recinto) {
                                 echo("<tr> <td>$recinto[0]</td><td></td> "); 
-                                echo("<td>");
-
-                                ?>
-                                <form action="consultas/detalles_evento.php" method="post"> 
-                                   <button type = 'sumbit' value="<?php $recinto[0] ?>" name = 'evento'>Ver detalles</button>
-                                </form>
-                                <?php echo("</td></tr>"); } ?>                    
-                    
+                                echo("<td>"); } ?>  
                     </div>
             </main>
             <footer class="py-4 bg-light mt-auto">
@@ -100,7 +108,9 @@
             </footer>
         </div>
     </div>
-    <script src="js/scripts.js"></script>
+    <script src="../js/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-    <script src="js/datatables-simple-demo.js"></script>
+    <script src="../js/datatables-simple-demo.js"></script>
 </section>
+
+<?php include('../templates/footer.php') ?>
