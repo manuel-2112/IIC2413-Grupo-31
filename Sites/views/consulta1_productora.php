@@ -2,9 +2,6 @@
 <?php
     include("../templates/header.php");
 ?>
-<head>
-<link href="css/styles.css" rel="stylesheet" />
-</head>
 <section class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
@@ -35,20 +32,20 @@
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading">Inicio</div>
-                        <a class="nav-link" href="../index.php">
+                        <a class="nav-link" href="index.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                             Dashboard
                         </a>
                         <div class="sb-sidenav-menu-heading">Consultas</div>
-                        <a class="nav-link" href="consulta1_productora.php">
+                        <a class="nav-link" href="views/consulta1_productora.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             Consulta 1
                         </a>
-                        <a class="nav-link" href="consulta2_productora.php">
+                        <a class="nav-link" href="views/consulta2_productora.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             Consulta 2
                         </a>
-                        <a class="nav-link" href="consulta3_productora.php">
+                        <a class="nav-link" href="views/consulta3_productora.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             Consulta 3
                         </a>
@@ -63,46 +60,13 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-4">Mis eventos:</h1>
+                    <h1 class="mt-4">Dashboard</h1>
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item active">Productora</li>
                     </ol>
-                    <?php
-                        $name = str_replace('_',' ',$_SESSION['username']);
-                        #Llama a conexión, crea el objeto PDO y obtiene la variable $db
-                        require("../config/connection.php");
-
-                        $query = "SELECT E.nombre as nombre, E.fecha_inicio as fecha_inicio, E.fecha_termino
-                        FROM Evento as E, Productoras as P, ProductoraEvento as PE
-                        WHERE P.id_p = PE.id_p AND E.id_ev = PE.id_ev AND LOWER(P.nombre) = '$name'";
-                        $result = $db2 -> prepare($query);
-                        $result -> execute();
-                        $productoras = $result -> fetchAll();
-                    ?>
-
-                    <div class="card mb-4">
-                    <div class="card-header">
-                        <i class="fas fa-table me-1"></i>
-                        Resultados
+                    <div class="row">
+                        
                     </div>
-                    <div class="card-body">
-                        <table id="datatablesSimple">
-                            <thead>
-                                <tr>
-                                    <th>Nombre Productoras</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            <?php
-                                foreach ($productoras as $productora) {
-                                    echo "<tr> <td>$productora[0]</td> </tr>";
-                                }
-                            ?>
-                            </tbody>
-                        </table>
-                    </div>
-                    </div>
-                    
             </main>
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">
@@ -118,9 +82,9 @@
             </footer>
         </div>
     </div>
-    <script src="../js/scripts.js"></script>
+    <script src="js/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-    <script src="../js/datatables-simple-demo.js"></script>
+    <script src="js/datatables-simple-demo.js"></script>
 </section>
 
 <?php include('../templates/footer.php') ?>
