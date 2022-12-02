@@ -76,7 +76,41 @@
                         <li class="breadcrumb-item active">Productora</li>
                     </ol>
                     <div class="row">
+                    <?php
+                        $name = str_replace('_',' ',$_SESSION['username']);
+                        #Llama a conexión, crea el objeto PDO y obtiene la variable $db
+                        require("../config/connection.php");
 
+                        $query = "SELECT E.nombre as nombre, E.fecha_inicio as fecha_inicio, E.fecha_termino
+                        FROM Evento as E, Productoras as P, ProductoraEvento as PE
+                        WHERE P.id_p = PE.id_p AND E.id_ev = PE.id_ev AND LOWER(P.nombre) = '$name'";
+                        $result = $db2 -> prepare($query);
+                        $result -> execute();
+                        $productoras = $result -> fetchAll();
+                    ?>
+
+                    <div class="card mb-4">
+                    <div class="card-header">
+                        <i class="fas fa-table me-1"></i>
+                        Resultados
+                    </div>
+                    <div class="card-body">
+                        <table id="datatablesSimple">
+                            <thead>
+                                <tr>
+                                    <th>Nombre Productoras</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <?php
+                                foreach ($productoras as $productora) {
+                                    echo "<tr> <td>$productora[0]</td> </tr>";
+                                }
+                            ?>
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
                     </div>
             </main>
             <footer class="py-4 bg-light mt-auto">
