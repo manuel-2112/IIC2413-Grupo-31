@@ -18,7 +18,7 @@
 
         echo(print_r($data_usuarios));
 
-        foreach ($data_productoras as $productora){
+        foreach ($data_usuarios as $productora){
             echo($productora[0]);
             echo($productora[1]);
             echo($productora[2]);
