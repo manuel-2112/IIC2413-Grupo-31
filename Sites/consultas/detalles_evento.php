@@ -58,19 +58,17 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-4">Filtrar Eventos</h1><br>
+                    <h1 class="mt-4">Detalles evento:</h1><br>
                     <ol class="breadcrumb mb-4">
-                        <li class="breadcrumb-item active">Productora</li>
+                        <li class="breadcrumb-item active">Artista</li>
                     </ol>
                     <div class="row">
-                    Contenido aca
                     <?php
                       $name = str_replace('_',' ',$_SESSION['username']);
                       $nombre_evento = $_POST['evento'];
                       #Llama a conexión, crea el objeto PDO y obtiene la variable $db
                       require("../config/connection.php");
                       $query = "SELECT L.recinto, E.fecha FROM Eventos as E, Lugar as L WHERE E.lid = L.lid AND E.nombre = '$nombre_evento';";
-                      echo $query;
                       $result = $db -> prepare($query);
                       $result -> execute();
                       $recintos = $result -> fetchAll();
@@ -79,20 +77,49 @@
                     <div class="card mb-4">
                     <div class="card-header">
                         <i class="fas fa-table me-1"></i>
-                        Resultados
+                        Recintos del Evento
                     </div>
                     <div class="card-body">
                         <table id="datatablesSimple">
                             <thead>
                                 <tr>
-                                <th>Nombre Evento</th>
+                                <th>Nombre Recinto</th>
                                 </tr>
                             </thead>
                             <tbody>
                             <?php
                               foreach ($recintos as $recinto) {
-                                echo("<tr> <td>$recinto[0]</td><td></td> "); 
-                                echo("<td>"); } ?>  
+                                echo("<tr> <td>$recinto[0]</td></tr>");} ?>  
+                            </tbody>
+                        </table>
+
+                        <?php
+                      $name = str_replace('_',' ',$_SESSION['username']);
+                      $nombre_evento = $_POST['evento'];
+                      #Llama a conexión, crea el objeto PDO y obtiene la variable $db
+                      require("../config/connection.php");
+                      $query = "SELECT A.nombre_escenico FROM Artistas as A, Eventos as E WHERE A.aid = E.aid AND E.nombre = '$nombre_evento';";
+                      $result = $db -> prepare($query);
+                      $result -> execute();
+                      $recintos = $result -> fetchAll();
+                    ?>
+
+                    <div class="card mb-4">
+                    <div class="card-header">
+                        <i class="fas fa-table me-1"></i>
+                        Artistas en el Evento
+                    </div>
+                    <div class="card-body">
+                        <table id="datatablesSimple">
+                            <thead>
+                                <tr>
+                                <th>Nombre Artista</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <?php
+                              foreach ($recintos as $recinto) {
+                                echo("<tr> <td>$recinto[0]</td></tr>");} ?>  
                             </tbody>
                         </table>
                     </div>
