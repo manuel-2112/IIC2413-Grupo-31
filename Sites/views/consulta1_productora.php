@@ -2,7 +2,9 @@
 <?php
     include("../templates/header.php");
 ?>
-
+<head>
+<link href="css/styles.css" rel="stylesheet" />
+</head>
 <section class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
