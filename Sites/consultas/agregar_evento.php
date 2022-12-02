@@ -41,6 +41,7 @@
     $query = "INSERT INTO ArtistaEvento (id_a, id_ev) VALUES($valor_result_artista, $id_ev)";
     $result = $db2 -> prepare($query);
 	$result -> execute();
+    $final_result -> $result -> fetchAll();
 
-    echo($result)
+    echo($final_result)
 ?>
