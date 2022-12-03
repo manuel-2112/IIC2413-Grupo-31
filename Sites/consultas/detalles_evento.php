@@ -63,159 +63,157 @@
                         <li class="breadcrumb-item active">Artista</li>
                     </ol>
                     <div class="row">
-                    <?php
-                      $name = str_replace('_',' ',$_SESSION['username']);
-                      $nombre_evento = $_POST['evento'];
-                      #Llama a conexión, crea el objeto PDO y obtiene la variable $db
-                      require("../config/connection.php");
-                      $query = "SELECT L.recinto, E.fecha FROM Eventos as E, Lugar as L WHERE E.lid = L.lid AND E.nombre = '$nombre_evento';";
-                      $result = $db -> prepare($query);
-                      $result -> execute();
-                      $recintos = $result -> fetchAll();
-                    ?>
+                        <?php
+                        $name = str_replace('_',' ',$_SESSION['username']);
+                        $nombre_evento = $_POST['evento'];
+                        #Llama a conexión, crea el objeto PDO y obtiene la variable $db
+                        require("../config/connection.php");
+                        $query = "SELECT L.recinto, E.fecha FROM Eventos as E, Lugar as L WHERE E.lid = L.lid AND E.nombre = '$nombre_evento';";
+                        $result = $db -> prepare($query);
+                        $result -> execute();
+                        $recintos = $result -> fetchAll();
+                        ?>
 
-                    <div class="card mb-4">
-                    <div class="card-header">
-                        <i class="fas fa-table me-1"></i>
-                        Recintos del Evento
-                    </div>
-                    <div class="card-body">
-                        <table id="datatablesSimple">
-                            <thead>
-                                <tr>
-                                <th>Nombre Recinto</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            <?php
-                              foreach ($recintos as $recinto) {
-                                echo("<tr> <td>$recinto[0]</td></tr>");} ?>  
-                            </tbody>
-                        </table>
-                    </div>
-                    </div>
+                        <div class="card mb-4">
+                        <div class="card-header">
+                            <i class="fas fa-table me-1"></i>
+                            Recintos del Evento
+                        </div>
+                        <div class="card-body">
+                            <table id="datatablesSimple">
+                                <thead>
+                                    <tr>
+                                    <th>Nombre Recinto</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <?php
+                                foreach ($recintos as $recinto) {
+                                    echo("<tr> <td>$recinto[0]</td></tr>");} ?>  
+                                </tbody>
+                            </table>
+                        </div>
+                        </div>
 
                         <?php
-                      $name = str_replace('_',' ',$_SESSION['username']);
-                      $nombre_evento = $_POST['evento'];
-                      #Llama a conexión, crea el objeto PDO y obtiene la variable $db
-                      require("../config/connection.php");
-                      $query = "SELECT A.nombre_escenico FROM Artistas as A, Eventos as E WHERE A.aid = E.aid AND E.nombre = '$nombre_evento';";
-                      $result = $db -> prepare($query);
-                      $result -> execute();
-                      $recintos = $result -> fetchAll();
-                    ?>
+                        $name = str_replace('_',' ',$_SESSION['username']);
+                        $nombre_evento = $_POST['evento'];
+                        #Llama a conexión, crea el objeto PDO y obtiene la variable $db
+                        require("../config/connection.php");
+                        $query = "SELECT A.nombre_escenico FROM Artistas as A, Eventos as E WHERE A.aid = E.aid AND E.nombre = '$nombre_evento';";
+                        $result = $db -> prepare($query);
+                        $result -> execute();
+                        $recintos = $result -> fetchAll();
+                        ?>
 
-                    <div class="card mb-4">
-                    <div class="card-header">
-                        <i class="fas fa-table me-1"></i>
-                        Artistas en el Evento
-                    </div>
-                    <div class="card-body">
-                        <table id="datatablesSimple">
-                            <thead>
-                                <tr>
-                                <th>Nombre Artista</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            <?php
-                              foreach ($recintos as $recinto) {
-                                echo("<tr> <td>$recinto[0]</td></tr>");} ?>  
-                            </tbody>
-                        </table>
-                    </div>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                Artistas en el Evento
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                        <th>Nombre Artista</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <?php
+                                    foreach ($recintos as $recinto) {
+                                        echo("<tr> <td>$recinto[0]</td></tr>");} ?>  
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
 
-                    </div>
 
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                Tour del Evento
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                        <th>Nombre Tour</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr> <td>Este Evento no corresponde a ningun Tour</td></tr> 
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
 
-                    <div class="card mb-4">
-                    <div class="card-header">
-                        <i class="fas fa-table me-1"></i>
-                        Tour del Evento
-                    </div>
-                    <div class="card-body">
-                        <table id="datatablesSimple">
-                            <thead>
-                                <tr>
-                                <th>Nombre Tour</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            <tr> <td>Este Evento no corresponde a ningun Tour</td></tr> 
-                            </tbody>
-                        </table>
-                    </div>
+                        <?php
+                        $name = str_replace('_',' ',$_SESSION['username']);
+                        $nombre_evento = $_POST['evento'];
+                        #Llama a conexión, crea el objeto PDO y obtiene la variable $db
+                        require("../config/connection.php");
+                        $query = "SELECT HO.nombre_hotel, C.ciudad, P.pais, T.tipo_traslado FROM Hoteles as HO, Paises as P, Ciudades as C, Hospedaje as H, Reservas as R, Artistas as A, Eventos as E, Traslados as T WHERE P.paid = C.paid AND C.cid = HO.cid AND HO.hoid = H.hoid AND H.hid = R.hid AND R.aid = A.aid AND A.aid = E.aid AND LOWER(A.nombre_escenico) = '$name' AND E.nombre = '$nombre_evento';";
+                        $result = $db -> prepare($query);
+                        $result -> execute();
+                        $recintos = $result -> fetchAll();
+                        ?>
+
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                Estadía y Traslado
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                        <th>Hotel</th>
+                                        <th>Ciudad</th>
+                                        <th>País</th>
+                                        <th>Tipo Traslado</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <?php
+                                    foreach ($recintos as $recinto) {
+                                        echo("<tr> <td>$recinto[0]</td><td>$recinto[1]</td><td>$recinto[2]</td><td>$recinto[3]</td></tr>");} ?>  
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <?php
+                        $name = str_replace('_',' ',$_SESSION['username']);
+                        $nombre_evento = $_POST['evento'];
+                        #Llama a conexión, crea el objeto PDO y obtiene la variable $db
+                        require("../config/connection.php");
+                        $query = "SELECT EC.asiento as categoria FROM EntradasCortesia as EC, Eventos as E, Artistas as A WHERE EC.eid = E.eid AND LOWER(A.nombre_escenico) = '$name' AND E.nombre = '$nombre_evento';";
+                        $result = $db -> prepare($query);
+                        $result -> execute();
+                        $recintos = $result -> fetchAll();
+                        ?>
+
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                Entradas de Cortesía
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                        <th>Categoría</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <?php
+                                    foreach ($recintos as $recinto) {
+                                        echo("<tr> <td>$recinto[0]</td></tr>");} ?>  
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                 </div>
-                <?php
-                      $name = str_replace('_',' ',$_SESSION['username']);
-                      $nombre_evento = $_POST['evento'];
-                      #Llama a conexión, crea el objeto PDO y obtiene la variable $db
-                      require("../config/connection.php");
-                      $query = "SELECT HO.nombre_hotel, C.ciudad, P.pais, T.tipo_traslado FROM Hoteles as HO, Paises as P, Ciudades as C, Hospedaje as H, Reservas as R, Artistas as A, Eventos as E, Traslados as T WHERE P.paid = C.paid AND C.cid = HO.cid AND HO.hoid = H.hoid AND H.hid = R.hid AND R.aid = A.aid AND A.aid = E.aid AND LOWER(A.nombre_escenico) = '$name' AND E.nombre = '$nombre_evento';";
-                      $result = $db -> prepare($query);
-                      $result -> execute();
-                      $recintos = $result -> fetchAll();
-                    ?>
-
-                    <div class="card mb-4">
-                    <div class="card-header">
-                        <i class="fas fa-table me-1"></i>
-                        Estadía y Traslado
-                    </div>
-                    <div class="card-body">
-                        <table id="datatablesSimple">
-                            <thead>
-                                <tr>
-                                <th>Hotel</th>
-                                <th>Ciudad</th>
-                                <th>País</th>
-                                <th>Tipo Traslado</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            <?php
-                              foreach ($recintos as $recinto) {
-                                echo("<tr> <td>$recinto[0]</td><td>$recinto[1]</td><td>$recinto[2]</td><td>$recinto[3]</td></tr>");} ?>  
-                            </tbody>
-                        </table>
-                    </div>
-
-                    </div>
-                    <?php
-                      $name = str_replace('_',' ',$_SESSION['username']);
-                      $nombre_evento = $_POST['evento'];
-                      #Llama a conexión, crea el objeto PDO y obtiene la variable $db
-                      require("../config/connection.php");
-                      $query = "SELECT EC.asiento as categoria FROM EntradasCortesia as EC, Eventos as E, Artistas as A WHERE EC.eid = E.eid AND LOWER(A.nombre_escenico) = '$name' AND E.nombre = '$nombre_evento';";
-                      $result = $db -> prepare($query);
-                      $result -> execute();
-                      $recintos = $result -> fetchAll();
-                    ?>
-
-                    <div class="card mb-4">
-                    <div class="card-header">
-                        <i class="fas fa-table me-1"></i>
-                        Entradas de Cortesía
-                    </div>
-                    <div class="card-body">
-                        <table id="datatablesSimple">
-                            <thead>
-                                <tr>
-                                <th>Categoría</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            <?php
-                              foreach ($recintos as $recinto) {
-                                echo("<tr> <td>$recinto[0]</td></tr>");} ?>  
-                            </tbody>
-                        </table>
-                    </div>
-
-                    </div>
-
-
                 </div>
             </main>
             <footer class="py-4 bg-light mt-auto">
