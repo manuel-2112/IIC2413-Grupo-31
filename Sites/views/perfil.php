@@ -60,9 +60,14 @@
                 <div class="container-fluid px-4">
                     <h1 class="mt-4">Mi perfil</h1>
                     <div class="row">
-                        <h3 class="mt-4">Mi username: <?php  echo $_SESSION['username']?></h3>
+                        <h4 class="mt-4">Mi username:</h4>
                         <br>
-                        <h3 class="mt-4">Mi contraseña: <?php echo $_SESSION['contrasena'] ?></h3>
+                        <h5><?php  echo $_SESSION['username']?></h5>
+                        <br>
+                        <hr>
+                        <h4 class="mt-4">Mi contraseña:</h4>
+                        <br>
+                        <h5><?php  echo $_SESSION['password']?></h5>
                     </div>
             </main>
             <footer class="py-4 bg-light mt-auto">
