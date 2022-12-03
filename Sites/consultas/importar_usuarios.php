@@ -33,7 +33,7 @@
         $result1 -> execute();
         $data1 = $result1 -> fetchAll();
     ?>
-    <div id="container">
+    <div id="layoutSidenav_content">
         <div class="container-fluid px-4">
             <h1 class="mt-4">Usuarios</h1><br>
 
