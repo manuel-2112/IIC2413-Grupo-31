@@ -86,6 +86,7 @@
                         <input type = 'date' name = 'fecha_termino'><br>
                         Artista invitado:<br>
                         <input type = 'text' name = 'artista'><br>
+                        <br>
                         <button style="width:500px" type="submit" class="btn btn-outline-info">Crear Evento</button><br>
                     </form>
                     </div>
