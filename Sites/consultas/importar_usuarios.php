@@ -34,26 +34,26 @@
         $data1 = $result1 -> fetchAll();
     ?>
     <div id="container">
-        <main>
-            <div class="container-fluid px-4">
-                <h1 class="mt-4">Usuarios</h1><br>
-                <div class="row">
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <i class="fas fa-table me-1"></i>
-                            Usuarios
-                        </div>
-                        <div class="card-body">
-                            <table id="datatablesSimple">
-                                <thead>
-                                    <tr>
-                                    <th>ID</th>
-                                    <th>Username</th>
-                                    <th>Contraseña</th>
-                                    <th>Tipo</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
+        <div class="container-fluid px-4">
+            <h1 class="mt-4">Usuarios</h1><br>
+
+            <div class="row">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <i class="fas fa-table me-1"></i>
+                        Usuarios
+                    </div>
+                    <div class="card-body">
+                        <table id="datatablesSimple">
+                            <thead>
+                                <tr>
+                                <th>ID</th>
+                                <th>Username</th>
+                                <th>Contraseña</th>
+                                <th>Tipo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
                                 <?php
                                 foreach ($data1 as $usuario) {
                                     echo("<tr>");
@@ -64,13 +64,12 @@
                                     echo("</tr>");
                                 }
                                 ?>
-                                </tbody>
-                            </table>
-                        </div>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
     </div>
 
 <?php include('../templates/footer.php') ?>
