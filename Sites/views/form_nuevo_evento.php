@@ -87,7 +87,7 @@
                         <h5>Artista invitado:</h5>
                         <input type = 'text' name = 'artista'><br>
                         <br>
-                        <button style="width:500px" type="submit" class="btn btn-outline-info">Crear Evento</button><br>
+                        <button type="submit" class="btn btn-outline-info">Crear Evento</button><br>
                     </form>
                     </div>
             </main>
