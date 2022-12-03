@@ -25,9 +25,9 @@
         <!-- Navbar-->
         <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#perfil.php" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#!">Mi perfil</a></li>
+                    <li><a class="dropdown-item" href="perfil.php">Mi perfil</a></li>
                     <li>
                       <form class="dropdown-item" action="logout.php" method="get">
                           <input class="btn btn-outline-info" type="submit" value="Cerrar sesion" ></input>
@@ -47,19 +47,6 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                             Dashboard
                         </a>
-                        <div class="sb-sidenav-menu-heading">Consultas</div>
-                        <a class="nav-link" href="consulta1_productora.php">
-                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                            Mis Eventos
-                        </a>
-                        <a class="nav-link" href="consulta2_productora.php">
-                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                            Filtrar Eventos
-                        </a>
-                        <a class="nav-link" href="form_nuevo_evento.php">
-                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                            Crear Evento
-                        </a>
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">
@@ -71,46 +58,11 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-4">Mis Eventos</h1>
-                    <ol class="breadcrumb mb-4">
-                        <li class="breadcrumb-item active">Productora</li>
-                    </ol>
+                    <h1 class="mt-4">Mi perfil</h1>
                     <div class="row">
-                    <?php
-                        $name = str_replace('_',' ',$_SESSION['username']);
-                        #Llama a conexión, crea el objeto PDO y obtiene la variable $db
-                        require("../config/connection.php");
-
-                        $query = "SELECT E.nombre as nombre, E.fecha_inicio as fecha_inicio, E.fecha_termino
-                        FROM Evento as E, Productoras as P, ProductoraEvento as PE
-                        WHERE P.id_p = PE.id_p AND E.id_ev = PE.id_ev AND LOWER(P.nombre) = '$name'";
-                        $result = $db2 -> prepare($query);
-                        $result -> execute();
-                        $productoras = $result -> fetchAll();
-                    ?>
-
-                    <div class="card mb-4">
-                    <div class="card-header">
-                        <i class="fas fa-table me-1"></i>
-                        Resultados
-                    </div>
-                    <div class="card-body">
-                        <table id="datatablesSimple">
-                            <thead>
-                                <tr>
-                                    <th>Nombre Productoras</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            <?php
-                                foreach ($productoras as $productora) {
-                                    echo "<tr> <td>$productora[0]</td> </tr>";
-                                }
-                            ?>
-                            </tbody>
-                        </table>
-                    </div>
-                    </div>
+                        <h3 class="mt-4">Mi username: <?php  echo $_SESSION['username']?></h3>
+                        <br>
+                        <h3 class="mt-4">Mi contraseña: <?php echo $_SESSION['contrasena'] ?></h3>
                     </div>
             </main>
             <footer class="py-4 bg-light mt-auto">
