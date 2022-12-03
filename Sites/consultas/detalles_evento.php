@@ -92,6 +92,8 @@
                                 echo("<tr> <td>$recinto[0]</td></tr>");} ?>  
                             </tbody>
                         </table>
+                    </div>
+                    </div>
 
                         <?php
                       $name = str_replace('_',' ',$_SESSION['username']);
@@ -123,6 +125,7 @@
                             </tbody>
                         </table>
                     </div>
+                </div>
             </main>
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">
