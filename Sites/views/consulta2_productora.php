@@ -82,7 +82,7 @@
                         <br/><br/>
                         Fecha termino
                         <input type="date" name="fecha_termino">
-                        <br>
+                        <br><br><br>
                         <input class="btn btn-outline-info" type="submit" value="Filtrar">
                     </form>
                     </div>
