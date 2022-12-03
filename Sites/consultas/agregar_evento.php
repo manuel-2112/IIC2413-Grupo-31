@@ -118,7 +118,7 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-4">Evento creado correctamente</h1><br>
+                    <h1 class="mt-4">Evento creado correctamente &#9989;</h1><br>
                 </div>
             </main>
             <footer class="py-4 bg-light mt-auto">
