@@ -77,10 +77,10 @@
                     </ol>
                     <div class="row">
                     <form align="center" action="../consultas/filtro_eventos_fecha.php" method="post">
-                        Fecha inicio:
+                        <h5>Fecha inicio:</h5>
                         <input type="date" name="fecha_inicio">
                         <br/><br/>
-                        Fecha termino
+                        <h5>Fecha termino</h5>
                         <input type="date" name="fecha_termino">
                         <br><br><br>
                         <input class="btn btn-outline-info" type="submit" value="Filtrar">
