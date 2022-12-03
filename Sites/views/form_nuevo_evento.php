@@ -72,7 +72,7 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-4">Mis Eventos</h1>
+                    <h1 class="mt-4">Crear Evento</h1>
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item active">Productora</li>
                     </ol>
@@ -86,7 +86,7 @@
                         <input type = 'date' name = 'fecha_termino'><br>
                         Artista invitado:<br>
                         <input type = 'text' name = 'artista'><br>
-                        <button style="width:500px" type="submit" class="btn btn-outline-info btn-lg btn-block">Crear Evento</button><br>
+                        <button style="width:500px" type="submit" class="btn btn-outline-info">Crear Evento</button><br>
                     </form>
                     </div>
             </main>
