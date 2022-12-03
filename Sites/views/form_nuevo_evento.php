@@ -77,14 +77,14 @@
                         <li class="breadcrumb-item active">Productora</li>
                     </ol>
                     <div class="row">
-                    <form action="../consultas/agregar_evento.php" method="post">
-                        <h5>Nombre evento</h5><br>
+                    <form align="center" action="../consultas/agregar_evento.php" method="post">
+                        <h5>Nombre evento</h5>
                         <input type = 'text' name = 'nombre'><br>
-                        <h5>Fecha de inicio:</h5><br>
+                        <h5>Fecha de inicio:</h5>
                         <input type = 'date' name = 'fecha_inicio'><br>
-                        <h5>Fecha de termino:</h5><br>
+                        <h5>Fecha de termino:</h5>
                         <input type = 'date' name = 'fecha_termino'><br>
-                        <h5>Artista invitado:</h5><br>
+                        <h5>Artista invitado:</h5>
                         <input type = 'text' name = 'artista'><br>
                         <br>
                         <button style="width:500px" type="submit" class="btn btn-outline-info">Crear Evento</button><br>
